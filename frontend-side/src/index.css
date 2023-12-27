@@ -103,7 +103,7 @@ code {
 .register-link .link:hover {
   text-decoration:underline;
 }
-@media (max-width:400px) {
+@media (max-width:380px) {
   .login-box {
     width:100%;
     height:80vh;

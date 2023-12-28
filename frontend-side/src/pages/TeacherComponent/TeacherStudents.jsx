@@ -14,7 +14,7 @@ function TeacherStudents() {
  
 
   useEffect(() => {
-    Axios.get(`http://localhost:3003/api/teacherstudentdetail/${TId}`)
+    Axios.get(`https://backend-kappa-gray.vercel.app/api/teacherstudentdetail/${TId}`)
       .then((result) => {
         setData(result.data);
         if (result.data.length === 0) {

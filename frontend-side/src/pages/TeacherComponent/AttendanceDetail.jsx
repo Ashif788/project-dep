@@ -15,7 +15,7 @@ function AttendanceDetail() {
   const [absentCount, setAbsentCount] = useState(0);
 
   useEffect(() => {
-    Axios.get(`http://localhost:3003/api/attendancedetails/${SId}`)
+    Axios.get(`https://backend-kappa-gray.vercel.app/api/attendancedetails/${SId}`)
       .then((result) => {
         console.log(result.data);
         setOriginalData(result.data);

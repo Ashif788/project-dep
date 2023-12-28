@@ -80,7 +80,7 @@ function StudentDetails() {
   const handleDeleteYes = () => {
     closeModal();
     if (selectedStudent) {
-      Axios.post(`http://localhost:3003/api/deletestudent/${IId}`, {
+      Axios.post(`https://backend-kappa-gray.vercel.app/api/deletestudent/${IId}`, {
         SId: selectedStudent.Regno,
       })
         .then((response) => {

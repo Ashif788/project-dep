@@ -33,7 +33,7 @@ function ClassDetails() {
   };
 
   useEffect(() => {
-    Axios.get(`http://localhost:3003/api/classdetails/${IId}`)
+    Axios.get(`https://backend-kappa-gray.vercel.app/api/classdetails/${IId}`)
       .then((result) => {
         setData(result.data);
         if (result.data.length === 0) {
@@ -79,7 +79,7 @@ function ClassDetails() {
   const handleDeleteYes = () => {
     closeModal();
     if (selectedClass) {
-      Axios.post(`http://localhost:3003/api/deleteclass/${IId}`, {
+      Axios.post(`https://backend-kappa-gray.vercel.app/api/deleteclass/${IId}`, {
         ClassID: selectedClass.Class_ID,
       })
         .then((response) => {

@@ -21,7 +21,7 @@ function TeacherHome() {
   const formattedDate = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
 
   useEffect(() => {
-    Axios.get(`http://localhost:3003/api/totalpresent/${TId}`, {
+    Axios.get(`https://backend-kappa-gray.vercel.app/api/totalpresent/${TId}`, {
       params: { date: formattedDate },
     })
       .then(result => {
@@ -35,7 +35,7 @@ function TeacherHome() {
   }, [TId, formattedDate]);
 
   useEffect(() => {
-    Axios.get(`http://localhost:3003/api/totalabsent/${TId}`, {
+    Axios.get(`https://backend-kappa-gray.vercel.app/api/totalabsent/${TId}`, {
       params: { date: formattedDate },
     })
       .then(result => {
@@ -50,7 +50,7 @@ function TeacherHome() {
 
 
   useEffect(() => {
-    Axios.get(`http://localhost:3003/api/teachertotalstudent2/${TId}`)
+    Axios.get(`https://backend-kappa-gray.vercel.app/api/teachertotalstudent2/${TId}`)
       .then(result => {
 
 
@@ -65,7 +65,7 @@ function TeacherHome() {
   }, [TId]);
 
   useEffect(() => {
-    Axios.get(`http://localhost:3003/api/teacheruserdata/${TId}`)
+    Axios.get(`https://backend-kappa-gray.vercel.app/api/teacheruserdata/${TId}`)
       .then(result => {
         setData(result.data[0]);
 

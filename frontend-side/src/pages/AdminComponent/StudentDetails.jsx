@@ -34,7 +34,7 @@ function StudentDetails() {
   };
 
   useEffect(() => {
-    Axios.get(`http://localhost:3003/api/studentdetail/${IId}`)
+    Axios.get(`https://backend-kappa-gray.vercel.app/api/studentdetail/${IId}`)
       .then((result) => {
         setData(result.data);
         if (result.data.length === 0) {

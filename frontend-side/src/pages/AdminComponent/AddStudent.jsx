@@ -30,7 +30,7 @@ function AddStudent() {
   };
 
   useEffect(() => {
-    Axios.get(`http://localhost:3003/api/classdetails/${IId}`)
+    Axios.get(`https://backend-kappa-gray.vercel.app/api/classdetails/${IId}`)
       .then(result => {
         setData(result.data);
         if (result.data.length === 0) {
@@ -81,7 +81,7 @@ function AddStudent() {
     seterror(newerror);
 
     if (Object.keys(errordata).length === 0) {
-      Axios.post(`http://localhost:3003/api/addstudent/${IId}`, {
+      Axios.post(`https://backend-kappa-gray.vercel.app/api/addstudent/${IId}`, {
         Regno: formdata.Regno,
         Name: formdata.name,
         Dob: formdata.Dob,

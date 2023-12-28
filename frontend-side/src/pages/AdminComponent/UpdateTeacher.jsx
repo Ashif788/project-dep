@@ -36,7 +36,7 @@ const closeModal = () => {
 
 
 useEffect(() => {
-    Axios.get(`http://localhost:3003/api/updateteacherdetails/${TId}/`)
+    Axios.get(`https://backend-kappa-gray.vercel.app/api/updateteacherdetails/${TId}/`)
       .then(result => {
         setform(prevFormdata => ({
           ...prevFormdata,
@@ -104,7 +104,7 @@ const HandleSubmit = (e) => {
 
 
   if (Object.keys(newerror).length === 0) {
-    Axios.put(`http://localhost:3003/api/updateteacher/${TId}`, {
+    Axios.put(`https://backend-kappa-gray.vercel.app/api/updateteacher/${TId}`, {
       Regno: formdata.Regno,
       Name: formdata.name,
       Dob: formdata.Dob,

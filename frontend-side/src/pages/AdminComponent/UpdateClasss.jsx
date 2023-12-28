@@ -35,7 +35,7 @@ function UpdateClasss()  {
   
 
   useEffect(() => {
-    Axios.get(`http://localhost:3003/api/updateclassdetails/${CId}/`)
+    Axios.get(`https://backend-kappa-gray.vercel.app/api/updateclassdetails/${CId}/`)
       .then(result => {
         setForm(prevFormdata => ({
           ...prevFormdata,
@@ -57,7 +57,7 @@ function UpdateClasss()  {
   
   
   useEffect(() => {
-    Axios.get(`http://localhost:3003/api/teacherdetail/${IId}`)
+    Axios.get(`https://backend-kappa-gray.vercel.app/api/teacherdetail/${IId}`)
       .then(result => {
         setData(result.data);
         if(!result.data.length){
@@ -99,7 +99,7 @@ function UpdateClasss()  {
     setError(newError);
   
     if (Object.keys(newError).length === 0) {
-      Axios.put(`http://localhost:3003/api/updateclass/${IId}/${CId}`, {
+      Axios.put(`https://backend-kappa-gray.vercel.app/api/updateclass/${IId}/${CId}`, {
       ClassID:formData.classid,
       Classname:formData.classname,
       Teachername:formData.teachername,

@@ -21,7 +21,7 @@ function TeacherHomenav()  {
   
   
     useEffect(() => {
-      Axios.get(`http://localhost:3003/api/teacheruserdata/${TId}`)
+      Axios.get(`https://backend-kappa-gray.vercel.app/api/teacheruserdata/${TId}`)
         .then(result => {
 
 
@@ -39,7 +39,7 @@ function TeacherHomenav()  {
 
     const handleLogout = () => {
 
-      Axios.get(`http://localhost:3003/api/logout`)
+      Axios.get(`https://backend-kappa-gray.vercel.app/api/logout`)
         .then((result) => {
           if(result.data.status){
             localStorage.removeItem("valid")

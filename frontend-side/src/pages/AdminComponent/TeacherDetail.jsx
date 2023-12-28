@@ -34,7 +34,7 @@ function TeacherDetail() {
   };
 
   useEffect(() => {
-    Axios.get(`http://localhost:3003/api/teacherdetail/${IId}`)
+    Axios.get(`https://backend-kappa-gray.vercel.app/api/teacherdetail/${IId}`)
       .then(result => {
         setData(result.data);
         if (result.data.length === 0) {
@@ -80,7 +80,7 @@ function TeacherDetail() {
   const handleDeleteYes = () => {
     closeModal();
     if (selectedTeacher) {
-      Axios.post(`http://localhost:3003/api/deleteteacher/${IId}`, {
+      Axios.post(`https://backend-kappa-gray.vercel.app/api/deleteteacher/${IId}`, {
         TeacherID: selectedTeacher.TeacherID,
       })
         .then((response) => {

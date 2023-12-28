@@ -61,7 +61,7 @@ setModalContent('');
   }, [IId]);
 
 useEffect(() => {
-  Axios.get(`http://localhost:3003/api/classdetails/${IId}`)
+  Axios.get(`https://backend-kappa-gray.vercel.app/api/classdetails/${IId}`)
     .then(result => {
       setData(result.data);
       if(result.data.length===0){
@@ -113,7 +113,7 @@ const HandleSubmit = (e) => {
 
 
   if (Object.keys(errordata).length === 0) {
-    Axios.put(`http://localhost:3003/api/updatestudent/${SId}`, {
+    Axios.put(`https://backend-kappa-gray.vercel.app/api/updatestudent/${SId}`, {
       Regno: formdata.Regno,
       Name: formdata.name,
       Dob: formdata.Dob,

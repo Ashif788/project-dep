@@ -45,7 +45,7 @@ const closeModal = () => {
 
 
 useEffect(() => {
-  Axios.get(`http://localhost:3003/api/teacherdetail/${IId}`)
+  Axios.get(`https://backend-kappa-gray.vercel.app/api/teacherdetail/${IId}`)
     .then(result => {
       setData(result.data);
       if(!result.data.length){

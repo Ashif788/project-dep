@@ -85,7 +85,7 @@ const HandleSubmit = (e) => {
 
 
   if (Object.keys(newerror).length === 0) {
-    Axios.post(`http://localhost:3003/api/addteacher/${IId}`, {
+    Axios.post(`https://backend-kappa-gray.vercel.app/api/addteacher/${IId}`, {
       Regno: formdata.Regno,
       Name: formdata.name,
       Dob: formdata.Dob,

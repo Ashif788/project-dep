@@ -19,7 +19,7 @@ const AttendanceRegister = () => {
   const formattedDate = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
 
   useEffect(() => {
-    Axios.get(`http://localhost:3003/api/teacheruserdata/${TId}`)
+    Axios.get(`https://backend-kappa-gray.vercel.app/api/teacheruserdata/${TId}`)
       .then(result => {
         
           setData(result.data[0]);
@@ -33,7 +33,7 @@ const AttendanceRegister = () => {
   }, [TId]);
 
   useEffect(() => {
-    Axios.get(`http://localhost:3003/api/attendance/${TId}`)
+    Axios.get(`https://backend-kappa-gray.vercel.app/api/attendance/${TId}`)
       .then((result) => {
         setdata(result.data);
 
@@ -48,7 +48,7 @@ const AttendanceRegister = () => {
   }, []);
 
   useEffect(() => {
-    Axios.get(`http://localhost:3003/api/attendancecheck/${TId}`, {
+    Axios.get(`https://backend-kappa-gray.vercel.app/api/attendancecheck/${TId}`, {
       params: { date: formattedDate },
     })
       .then(result => {
@@ -88,7 +88,7 @@ const AttendanceRegister = () => {
         const today = new Date();
         const formattedDate = `${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`;
 
-        Axios.post('http://localhost:3003/api/submitAttendance', {
+        Axios.post('https://backend-kappa-gray.vercel.app/api/submitAttendance', {
           attendanceData,
           date: formattedDate,
           ClassID: Data.Class_ID,
@@ -120,7 +120,7 @@ const AttendanceRegister = () => {
 
 
   useEffect(() => {
-    Axios.get(`http://localhost:3003/api/todaysattendance/${TId}`,
+    Axios.get(`https://backend-kappa-gray.vercel.app/api/todaysattendance/${TId}`,
       { params: { date: formattedDate } })
       .then((result) => {
         
